@@ -1,0 +1,9 @@
+<?php
+
+	$mobilechecker = new UserAgent_Mobile_Checker($_SERVER['HTTP_USER_AGENT'], $_SERVER['HTTP_ACCEPT']);
+	var_export($mobilechecker->isPC());
+	if($mobilechecker->isMobile() && $mobilechecker->isWindowsPhone7()) {
+		print $mobilechecker->MobilePlatform();
+	}
+
+?>
